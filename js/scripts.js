@@ -45,7 +45,7 @@ function setGameElements() {
 			pickElem.style.display = 'none';
 			resultsElem.style.display = 'none';
 	}
-}
+};
 setGameElements();
 
 var playerPointsElem = document.getElementById('js-playerPoints'),
@@ -63,16 +63,16 @@ function newGame() {
 		setGamePoints();
 	}
 
-}
+};
 
 function playerPick(playerPick) {
 	console.log(playerPick);
-}
+};
 
 function getComputerPick() {
 	var possiblePicks = ['rock', 'paper', 'scissors'];
 	return possiblePicks[Math.floor(Math.random() * 3)];
-}
+};
 
 var playerPickElem = document.getElementById('js-playerPick'),
 	computerPickElem = document.getElementById('js-computerPick'),
@@ -85,7 +85,7 @@ function playerPick(playerPick) {
 	playerPickElem.innerHTML = playerPick;
 	computerPickElem.innerHTML = computerPick;
 	checkRoundWinner(playerPick, computerPick);
-}
+};
 
 function checkRoundWinner(playerPick, computerPick) {
 	playerResultElem.innerHTML = computerResultElem.innerHTML = '';
@@ -111,19 +111,19 @@ function checkRoundWinner(playerPick, computerPick) {
 	}
 	setGamePoints();
 	endGame();
-}
+};
 
 
 function setGamePoints() {
 	playerPointsElem.innerHTML = player.score;
 	computerPointsElem.innerHTML = computer.score;
 
-}
+};
 
 
 function endGame() {
 	if (player.score == 10) {
-		alert('Wygrał' + player.name)
+		alert('Wygrał ' + player.name)
 		gameState = 'ended'
 	} else if (computer.score == 10) {
 		alert('Przegrałeś')
@@ -131,4 +131,4 @@ function endGame() {
 	}
 
 	setGameElements();
-}
+};
