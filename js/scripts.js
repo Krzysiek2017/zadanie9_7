@@ -37,6 +37,12 @@ function setGameElements() {
 			break;
 		case 'ended':
 			newGameBtn.innerText = 'Jeszcze raz';
+            
+            computerPickElem.innerHTML = 'Computer selection';
+			computerResultElem.innerHTML = 'Computer Score';
+			playerResultElem.innerHTML = 'Player Score';
+			playerPickElem.innerHTML = 'Player selection';
+            
 
 
 		case 'notStarted':
@@ -93,7 +99,7 @@ function checkRoundWinner(playerPick, computerPick) {
 	var winnerIs = 'player';
 
 	if (playerPick == computerPick) {
-		winnerIs = 'noone'; // remis
+		winnerIs = 'none'; // remis
 	} else if (
 		(computerPick == 'rock' && playerPick == 'scissors') ||
 		(computerPick == 'scissors' && playerPick == 'paper') ||
